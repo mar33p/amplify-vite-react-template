@@ -29,7 +29,7 @@ function App() {
       <button onClick={createTodo}>+ new</button>
       <ul style={{ listStyleType: "none" }}>
         {todos.map((todo) => (
-          <li key={todo.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+          <li key={todo.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '7px' }}>
           <span>{todo.content}</span>
           <button onClick={() => deleteTodo(todo.id)} key={todo.id}>X</button>
           </li>
