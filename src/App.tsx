@@ -25,12 +25,14 @@ function App() {
 
   return (
     <main>
-      <h5>My todos</h5>
       <h1>{user?.signInDetails?.loginId}'s todos</h1>
       <button onClick={createTodo}>+ new</button>
-      <ul>
+      <ul style={{ listStyleType: "none" }}>
         {todos.map((todo) => (
-          <li onClick={() => deleteTodo(todo.id)} key={todo.id}>{todo.content}</li>
+          <li key={todo.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+          <span>{todo.content}</span>
+          <button onClick={() => deleteTodo(todo.id)} key={todo.id}>X</button>
+          </li>
         ))}
       </ul>
       <div>
