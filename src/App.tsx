@@ -25,10 +25,11 @@ function App() {
 
   return (
     <main>
-      <h1>My todos</h1>
+      <h5>My todos</h5>
       <h1>{user?.signInDetails?.loginId}'s todos</h1>
       <button onClick={createTodo}>+ new</button>
       <button onClick={() => console.log(user)}>Log user</button>
+      <button onClick={() => console.log(client)}>Log client</button>
       <ul>
         {todos.map((todo) => (
           <li onClick={() => deleteTodo(todo.id)} key={todo.id}>{todo.content}</li>
